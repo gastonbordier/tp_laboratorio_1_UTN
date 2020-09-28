@@ -13,10 +13,10 @@
 #endif /* SUMAF_H_ */
 
 
-float ingresoUno();
-float ingresoDos();
-float getSuma(float x, float y);
-float getResta(float x, float y);
-float getProducto(float x, float y);
-float getDivision(float x, float y);
-float getFactorial(float x);
+double ingresoUno();
+double ingresoDos();
+double getSuma(double x, double y);
+double getResta(double x, double y);
+double getProducto(double x, double y);
+double getDivision(double x, double y);
+double getFactorial(double x);

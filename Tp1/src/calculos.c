@@ -1,28 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float operandoUno;
-float operandoDos;
+double operandoUno;
+double operandoDos;
 
 
 /*
  *\brief pide al usuario que ingrese un numero y lo almacena en una variable
  *\return devuelve el numero ingresado
  */
-float ingresoUno() {
+double ingresoUno() {
 	printf("\nIngrese el primer operando\n");
 	fflush(stdin);
-	scanf("%f", &operandoUno);
+	scanf("%lf", &operandoUno);
 	return operandoUno;
 }
 /*
  *\brief pide al usuario que ingrese un numero y lo almacena en una variable
  *\return devuelve el numero ingresado
  */
-float ingresoDos() {
+double ingresoDos() {
 	printf("\nIngrese el segundo operando\n");
 	fflush(stdin);
-	scanf("%f", &operandoDos);
+	scanf("%lf", &operandoDos);
 	return operandoDos;
 }
 /*
@@ -31,9 +31,9 @@ float ingresoDos() {
  *\param y Es el segundo numero
  *\return devuelve el resultado de la suma
  */
-float getSuma(float x, float y) {
+double getSuma(double x, double y) {
 
-	float total = x + y;
+	double total = x + y;
 
 	return total;
 }
@@ -43,9 +43,9 @@ float getSuma(float x, float y) {
  *\param y Es el segundo numero
  *\return devuelve el resultado de la resta
  */
-float getResta(float x, float y) {
+double getResta(double x, double y) {
 
-	float total = x - y;
+	double total = x - y;
 
 	return total;
 }
@@ -55,9 +55,9 @@ float getResta(float x, float y) {
  *\param y Es el segundo numero
  *\return devuelve el resultado de la multiplicacion
  */
-float getProducto(float x, float y) {
+double getProducto(double x, double y) {
 
-	float total = x * y;
+	double total = x * y;
 
 	return total;
 }
@@ -67,9 +67,9 @@ float getProducto(float x, float y) {
  *\param y Es el divisor
  *\return devuelve el resultado de la division, si el divisor es cero devuelve cero
  */
-float getDivision(float x, float y) {
+double getDivision(double x, double y) {
 
-	float total;
+	double total;
 
 	if (y == 0) {
 		printf("\nNo es posible dividir por cero\n");
@@ -84,13 +84,16 @@ float getDivision(float x, float y) {
  *\param x el numero a factorear
  *\return devuelve el resultado de la operacion. si x no es entero, lo trunca a su valor entero. Si es negativo, el resultado es 1
  */
-float getFactorial(float x) {
-	int numero = (int) x;
-	int total = 1;
-	for (int i = 1; i <= numero; i++) {
+double getFactorial(double x) {
+
+	double total = 1;
+	for (int i = 1; i <= (int)x; i++) {
 
 		total = total * i;
 
+	}
+	if ( x == 0){
+		total = 0;
 	}
 	return total;
 

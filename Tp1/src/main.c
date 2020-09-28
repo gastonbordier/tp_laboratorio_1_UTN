@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : Suma.c
+ Name        : main.c
  Author      : Gaston Bordier
  Description : Programa con funciones para realizar calculos
  ============================================================================
@@ -11,17 +11,17 @@
 
 #include "calculos.h"
 
-float operandoUno = 0;
-float operandoDos = 0;
+double operandoUno = 0;
+double operandoDos = 0;
 char salir = 'n';
 int opcion = 0;
 
-float resultadoSuma = 0;
-float resultadoResta = 0;
-float resultadoMultiplicacion = 0;
-float resultadoDivision = 0;
-float resultadoFactorialUno = 0;
-float resultadoFactorialDos = 0;
+double resultadoSuma = 0;
+double resultadoResta = 0;
+double resultadoMultiplicacion = 0;
+double resultadoDivision = 0;
+double resultadoFactorialUno = 0;
+double resultadoFactorialDos = 0;
 
 int validacionResultados = 0;
 int validacionDivisorCero = 0;
@@ -49,7 +49,7 @@ int main() {
 		printf("\n4.- Mostrar los resultados");
 		printf("\n5.- Salir del programa\n");
 
-		printf("\nValor de operando 1: %.2f.		Valor de operando 2: %.2f\n",
+		printf("\nValor de operando 1: %.2lf.		Valor de operando 2: %.2lf\n",
 				operandoUno, operandoDos);
 
 		if (validacionOperaciones == 1) {
@@ -59,15 +59,16 @@ int main() {
 
 		if (validacionResultados == 1) {
 
-			printf("\nEl resultado de la suma es %.2f.\n", resultadoSuma);
-			printf("\nEl resultado de la resta es %.2f.\n", resultadoResta);
-			printf("\nEl resultado de la multiplicacion es %.2f.\n",
+			printf("\nEl resultado de la suma es %.2lf.\n", resultadoSuma);
+			printf("\nEl resultado de la resta es %.2lf.\n", resultadoResta);
+			printf("\nEl resultado de la multiplicacion es %.2lf.\n",
 					resultadoMultiplicacion);
 
 		}
 
+
 		if (validacionResultados == 1 && validacionDivisorCero == 0) {
-			printf("\nEl resultado de la division es %.2f.\n",
+			printf("\nEl resultado de la division es %.2lf.\n",
 					resultadoDivision);
 		} else if (validacionResultados == 1 && validacionDivisorCero == 1) {
 			printf("\nNo se puede dividir por cero.\n");
@@ -82,7 +83,7 @@ int main() {
 				printf(
 						"\nEl primer numero ha sido truncado en su valor entero.");
 
-			printf("\nEl resultado del factorial del primer numero es %.0f\n",
+			printf("\nEl resultado del factorial del primer numero es %.0lf\n",
 					resultadoFactorialUno);
 
 			if (validacionNegativoParaFactorialDos != 0)
@@ -92,7 +93,7 @@ int main() {
 				printf(
 						"\nEl segundo numero ha sido truncado en su valor entero.");
 
-			printf("\nEl resultado del factorial del segundo numero es %.0f\n",
+			printf("\nEl resultado del factorial del segundo numero es %.0lf\n",
 					resultadoFactorialDos);
 		}
 
@@ -116,7 +117,7 @@ int main() {
 			resultadoMultiplicacion = getProducto(operandoUno, operandoDos);
 			resultadoDivision = getDivision(operandoUno, operandoDos);
 
-			float temp= operandoUno;
+			double temp= operandoUno;
 			int validacionTemp;
 
 			if (operandoUno < 0) {
@@ -195,6 +196,8 @@ int reseteoValidaciones() {
 	validacionDivisorCero = 0;
 	validacionEnteroParaFactorialUno = 0;
 	validacionEnteroParaFactorialDos = 0;
+	validacionNegativoParaFactorialUno = 0;
+	validacionNegativoParaFactorialDos = 0;
 	return 0;
 }
 
