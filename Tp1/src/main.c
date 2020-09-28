@@ -11,6 +11,7 @@
 
 #include "calculos.h"
 
+
 double operandoUno = 0;
 double operandoDos = 0;
 char salir = 'n';
@@ -32,6 +33,8 @@ int validacionEnteroParaFactorialUno = 0;
 int validacionEnteroParaFactorialDos = 0;
 
 int validacionOperaciones = 0;
+
+int reseteoValidaciones();
 
 int main() {
 
@@ -200,4 +203,3 @@ int reseteoValidaciones() {
 	validacionNegativoParaFactorialDos = 0;
 	return 0;
 }
-

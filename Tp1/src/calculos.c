@@ -98,4 +98,8 @@ double getFactorial(double x) {
 	return total;
 
 }
+/*
+ *\brief devuelve todos los flags de impresion de resultados de casos particulares a cero
+*/
+
 

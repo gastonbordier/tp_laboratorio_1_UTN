@@ -20,3 +20,4 @@ double getResta(double x, double y);
 double getProducto(double x, double y);
 double getDivision(double x, double y);
 double getFactorial(double x);
+
