@@ -28,17 +28,7 @@ int main(void) {
 
 	initEmployees(arrayEmployee, MAX);
 
-/*	 addEmployee(arrayEmployee, MAX, 101, "Juan", "Fernandez", 35000.00, 1);
-	 addEmployee(arrayEmployee, MAX, 102, "Juan", "Dieguez", 50000.00, 2);
-	 addEmployee(arrayEmployee, MAX, 103, "Juan", "Bordier", 12000.00, 4);
-	 addEmployee(arrayEmployee, MAX, 104, "Juan", "Entel", 32000.00, 1);
-	 addEmployee(arrayEmployee, MAX, 105, "Juan", "Fernandez", 45000.00, 2);
-	 addEmployee(arrayEmployee, MAX, 106, "Juan", "Goriostiaga", 15000.00, 4);
-	 addEmployee(arrayEmployee, MAX, 107, "Juan", "Antioquia", 44000.00, 3);
-	 addEmployee(arrayEmployee, MAX, 108, "Juan", "Fernandez", 20000.00, 3);
-	 addEmployee(arrayEmployee, MAX, 109, "Juan", "Cruz", 10000.00, 2);
-	 addEmployee(arrayEmployee, MAX, 110, "Juan", "Bordier", 25000.00, 2);
-*/
+
 
 	do {
 
